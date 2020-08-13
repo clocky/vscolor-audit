@@ -24,5 +24,10 @@ for argb, count in counter:
 by_hue = sorted(table, key=itemgetter(4, 5))
 
 # Render it all nicely to the console
-print(tabulate(by_hue, headers=[
-      "Count", "Sample", "ARGB", "RGB", "Hue", "Luminance"]))
+print(
+    tabulate(
+        by_hue,
+        headers=["Count", "Sample", "ARGB", "RGB", "Hue", "Luminance"],
+        tablefmt="github"
+    )
+)
